@@ -1,0 +1,43 @@
+﻿<Properties>
+  <MonoDevelop.Ide.Workbench ActiveDocument="Player.cs" ctype="Workbench">
+    <Files>
+      <File FileName="texts/help" Line="16" Column="44" />
+      <File FileName="TextDiscriminator.cs" Line="32" Column="56" />
+      <File FileName="tests/SearchQueryFixture.cs" Line="19" Column="57" />
+      <File FileName="todo.txt" Line="3" Column="27" />
+      <File FileName="mConfig.cs" Line="7" Column="18" />
+      <File FileName="Program.cs" Line="58" Column="19" />
+      <File FileName="ConfigSettingsFacade.cs" Line="22" Column="5" />
+      <File FileName="../../.config/MonoDevelop/addins-setup.config" Line="1" Column="1" />
+      <File FileName="Properties/AssemblyInfo.cs" Line="35" Column="30" />
+      <File FileName="FileFinder.cs" Line="16" Column="33" />
+      <File FileName="Player.cs" Line="6" Column="1" />
+      <File FileName="GStreamerAudioStream.cs" Line="15" Column="3" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State expanded="True">
+          <Node name="m" expanded="True">
+            <Node name="Properties" expanded="True" />
+            <Node name="tests" expanded="True" />
+            <Node name="texts" expanded="True" />
+            <Node name="Player.cs" selected="True" />
+          </Node>
+        </State>
+      </Pad>
+      <Pad Id="ClassPad">
+        <State expanded="True">
+          <Node name="m" expanded="True">
+            <Node name="m" expanded="True">
+              <Node name="m.Program" selected="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" ctype="Workspace" />
+</Properties>

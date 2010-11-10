@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="3.5">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{AA670A16-7ACA-40A8-938A-8231FD3A2D91}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>m</RootNamespace>
+    <AssemblyName>m</AssemblyName>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>3</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Rhino.Mocks, Version=3.4.0.0, Culture=neutral, PublicKeyToken=0b3305902db7183f">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Rhino.Mocks.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Tao.FFmpeg, Version=0.4.9.0, Culture=neutral, PublicKeyToken=9c7a200e36c0094e">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Tao.FFmpeg.dll</HintPath>
+    </Reference>
+    <Reference Include="Tao.OpenAl, Version=1.1.0.0, Culture=neutral, PublicKeyToken=a7579dda88828311">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Tao.OpenAl.dll</HintPath>
+    </Reference>
+    <Reference Include="Gallio, Version=3.0.5.546, Culture=neutral, PublicKeyToken=eb9cfa67ee6ab36e">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\Gallio.dll</HintPath>
+    </Reference>
+    <Reference Include="MbUnit.Compatibility, Version=3.0.5.546, Culture=neutral, PublicKeyToken=eb9cfa67ee6ab36e">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\MbUnit.Compatibility.dll</HintPath>
+    </Reference>
+    <Reference Include="MbUnit, Version=3.0.5.546, Culture=neutral, PublicKeyToken=eb9cfa67ee6ab36e">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\MbUnit.dll</HintPath>
+    </Reference>
+    <Reference Include="gstreamer-sharp, Version=0.10.0.0, Culture=neutral, PublicKeyToken=309ac158876bfe7b">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\gstreamer-sharp.dll</HintPath>
+    </Reference>
+    <Reference Include="glib-sharp, Version=2.12.0.0, Culture=neutral, PublicKeyToken=35e10195dab3c99f" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="FFMpegAudioStream.cs" />
+    <Compile Include="AudioStreamFactory.cs" />
+    <Compile Include="BackgroundWorkerFactory.cs" />
+    <Compile Include="BackgroundWorkerWrapper.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Command.cs" />
+    <Compile Include="CommandFactory.cs" />
+    <Compile Include="ConfigSettingsFacade.cs" />
+    <Compile Include="ConsoleFacade.cs" />
+    <Compile Include="Decoder.cs" />
+    <Compile Include="FileFinder.cs" />
+    <Compile Include="FilenameComparer.cs" />
+    <Compile Include="FileSystemFacade.cs" />
+    <Compile Include="IAudioStream.cs" />
+    <Compile Include="IAudioStreamFactory.cs" />
+    <Compile Include="IBackgroundWorkerFactory.cs" />
+    <Compile Include="IBackgroundWorkerWrapper.cs" />
+    <Compile Include="ICommand.cs" />
+    <Compile Include="ICommandDiscriminator.cs" />
+    <Compile Include="ICommandFactory.cs" />
+    <Compile Include="IConfigSettingsFacade.cs" />
+    <Compile Include="IConsoleFacade.cs" />
+    <Compile Include="IFileFinder.cs" />
+    <Compile Include="IFileSystemFacade.cs" />
+    <Compile Include="IInformationDisplayer.cs" />
+    <Compile Include="InformationDisplayer.cs" />
+    <Compile Include="IPlaylistReader.cs" />
+    <Compile Include="ISearchQuery.cs" />
+    <Compile Include="ISearchQueryFactory.cs" />
+    <Compile Include="IStateMachine.cs" />
+    <Compile Include="ITextDiscriminator.cs" />
+    <Compile Include="mConfig.cs" />
+    <Compile Include="Player.cs" />
+    <Compile Include="PlaylistReader.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SearchQuery.cs" />
+    <Compile Include="SearchQueryFactory.cs" />
+    <Compile Include="tests\AudioStreamFactoryFixture.cs" />
+    <Compile Include="tests\BackgroundWorkerFactoryFixture.cs" />
+    <Compile Include="tests\CommandFactoryFixture.cs" />
+    <Compile Include="tests\FileFinderFixture.cs" />
+    <Compile Include="tests\FilenameComparerFixture.cs" />
+    <Compile Include="tests\InformationDisplayerFixture.cs" />
+    <Compile Include="tests\mConfigFixture.cs" />
+    <Compile Include="tests\MockingFixture.cs" />
+    <Compile Include="tests\PlayerFixture.cs" />
+    <Compile Include="tests\PlaylistReaderFixture.cs" />
+    <Compile Include="tests\ProgramFixture.cs" />
+    <Compile Include="tests\SearchQueryFactoryFixture.cs" />
+    <Compile Include="tests\SearchQueryFixture.cs" />
+    <Compile Include="tests\TextDiscriminatorFixture.cs" />
+    <Compile Include="TextDiscriminator.cs" />
+    <Compile Include="GStreamerAudioStream.cs" />
+    <Compile Include="Platform.cs" />
+    <Compile Include="IPlatform.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="texts\help" />
+    <EmbeddedResource Include="tests\playlists\m3u" />
+    <EmbeddedResource Include="tests\playlists\pls" />
+    <EmbeddedResource Include="tests\playlists\plaintext" />
+    <EmbeddedResource Include="tests\playlists\m3uwithurl" />
+    <Content Include="todo.txt" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

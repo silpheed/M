@@ -1,0 +1,26 @@
+﻿TODO before it's usable
+
+* what do to about config?
+* Get it working and installing on unix
+* Capture ctrl+c close OR find the correct program ending event
+* All tests green, test on windows
+
+TODO before going public
+
+* Ensure that it can be legally made public, replace restrictive licence with permissive one
+
+
+TODO sometime
+
+* Volume command: + volume up, ++ more, +++ even more etc. - volume down
+* Skip time command: s # - skip # seconds. can be negative
+* Playlist maker
+* Implement logging with log4net
+* Replace FileFinder with Lucene? Maybe only way to get rid of MONO_IOMAP
+* Ogg support
+* Capture up/down key presses to show previous command
+* Make bad sound file setable in config?
+
+
+NOTES (delete before using)
+FFmpeg svn 11033 with slight modifications

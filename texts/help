@@ -1,0 +1,48 @@
+﻿m
+
+<term>      Play a track with this in the filename. If multiple files found, play the shortest filename.
+m <term>    Play a track with this in the filename. If multiple files found, play the shortest filename.
+r <term>    Play a track with this in the filename. If multiple files found, play a random track from that list.
+x           Stop. Stopping while already stopped exits program.
+xx or q     Exit program.
+re          Repeat the current track, or previous track if stopped.
+pp          Pause, or play if paused.
+pl <term>   Play a playlist with this in the filename. Loop stays as it was previously. No looping is default.
+pln <term>  Play a playlist with this in the filename. Turn off looping.
+plc <term>  Play a playlist with this in the filename. Turn on continuous looping.
+plr <term>  Play a playlist with this in the filename. Tracks are played in random order.
+n #         Next track, # is how far forward to go. No value is 1.
+p #         Previous track, # is how far backward to go. No value is 1.
+g #         Go to track number # in history.
+f <term>    Display all tracks matching this term.
+ln          Turn off looping.
+lc, ls or l Turn on sequential looping.
+lr          Turn on random looping.
+h           Display history.
+i           Display track info.
+v           Display current version.
+?, /?, --help   Display this help screen.
+
+Note about search terms:
+All <term> terms are case insensitive. Extensions are not considered. e.g.
+Term: track one
+Will match: /music/Track one.mp3 and /music/Track twenty-one.mp3
+
+Terms within double quotes (") are treated as a single term. e.g.
+Term: "track one"
+Will match: /music/Track one and a half.mp3 and NOT /music/Track twenty-one.mp3
+
+Terms can be excluded with a minus sign (-). e.g.
+Term: track -one
+Will match: /music/Track two.mp3 and NOT /music/Track one.mp3
+
+A minus sign directly after a non-space will not mark the term as an exclusion. e.g.
+Term: track-one
+Will match: /music/Track-one and a half.mp3
+
+These basic search rules are similar to a Google search. e.g.
+Term: track -"twenty-one"
+Will match: /music/Track one.mp3 and NOT /music/Track twenty-one.mp3
+
+Note about playlists:
+Accepted playlists are: m3u, pls. Text (.txt) files consisting of newline-terminated filenames are also accepted.
